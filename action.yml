@@ -28,7 +28,7 @@ runs:
 
     # needed for cache to work https://github.com/crazy-max/ghaction-github-runtime
     - name: Expose GitHub Runtime
-      uses: crazy-max/ghaction-github-runtime@v2
+      uses: crazy-max/ghaction-github-runtime@v4
 
     - run: DEFAULT_BRANCH=${{ github.event.repository.default_branch }} BASE_SHA=${{ github.event.pull_request.head.sha }} INPUT_RUN_STEPS=${{ inputs.run-steps }} INPUT_GITHUB_TOKEN=${{ inputs.github-token }} INPUT_SCOPE=${{ inputs.scope }} node ${{ github.action_path }}/dist/index.js
       shell: bash
