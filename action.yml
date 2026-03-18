@@ -22,7 +22,7 @@ runs:
   using: composite
   steps:
     # forcing node 16.10.0 since later versions have memory issues with jest
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v6
       with:
         node-version: "16.10.0"
 
